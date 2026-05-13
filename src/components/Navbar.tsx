@@ -3,6 +3,8 @@
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { modak } from "../app/fonts";
+import DownloadForMac from "./DownloadForMac";
 
 const links = [
   { label: "Home", href: "#home" },
@@ -27,7 +29,9 @@ export default function Navbar() {
             priority
           />
 
-          <span className="font-[var(--font-logo)] text-2xl tracking-wide text-white">
+          <span
+            className={`${modak.className} text-[1.7rem] leading-none tracking-tight text-white md:text-[1.85rem]`}
+          >
             WallyAI
           </span>
         </a>
@@ -37,19 +41,17 @@ export default function Navbar() {
             <a
               key={link.label}
               href={link.href}
-              className="text-sm text-white/60 transition hover:text-white"
+              className="text-sm font-medium text-white/60 transition hover:text-white"
             >
               {link.label}
             </a>
           ))}
         </div>
 
-        <a
-          href="/waitlist"
-          className="hidden rounded-full border border-white/15 bg-white px-5 py-2 text-sm font-medium text-black transition hover:bg-white/90 md:inline-flex"
-        >
-          Join Waitlist
-        </a>
+        <DownloadForMac
+          variant="navbar"
+          className="hidden md:inline-flex"
+        />
 
         <button
           onClick={() => setOpen(!open)}
@@ -68,19 +70,17 @@ export default function Navbar() {
                 key={link.label}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="text-white/70"
+                className="text-sm font-medium text-white/70 transition hover:text-white"
               >
                 {link.label}
               </a>
             ))}
 
-            <a
-              href="/waitlist"
-              onClick={() => setOpen(false)}
-              className="rounded-full bg-white px-5 py-3 text-center text-sm font-medium text-black"
-            >
-              Join Waitlist
-            </a>
+            <DownloadForMac
+              variant="navbar"
+              className="w-full justify-center px-5 py-3 text-center"
+              onNavigate={() => setOpen(false)}
+            />
           </div>
         </div>
       )}

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import DownloadForMac from "./DownloadForMac";
 
 export default function CTA() {
   return (
@@ -14,21 +15,18 @@ export default function CTA() {
         <div className="absolute inset-0 bg-black/50" />
 
         <div className="relative mx-auto max-w-3xl">
-          <h2 className="text-4xl font-semibold tracking-tight md:text-6xl">
+          <h2 className="type-heading text-balance text-4xl font-semibold tracking-[-0.03em] md:text-6xl md:tracking-[-0.04em]">
             Give your Mac a better view.
           </h2>
 
-          <p className="mx-auto mt-5 max-w-xl leading-8 text-white/70">
-            Join the waitlist and be first to try WallyAI when the Mac app
-            launches.
+          <p className="mx-auto mt-5 max-w-xl leading-relaxed tracking-tight text-white/[0.68]">
+            Download the native macOS app and start turning your photos into
+            cinematic wallpapers in minutes.
           </p>
 
-          <a
-            href="#waitlist"
-            className="mt-8 inline-flex rounded-full bg-white px-7 py-3 text-sm font-semibold text-black transition hover:bg-white/90"
-          >
-            Join Waitlist
-          </a>
+          <div className="mt-8 flex justify-center">
+            <DownloadForMac variant="light" />
+          </div>
         </div>
       </div>
     </section>

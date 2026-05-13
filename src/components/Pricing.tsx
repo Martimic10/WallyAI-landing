@@ -1,4 +1,5 @@
 import { Check } from "lucide-react";
+import DownloadForMac from "./DownloadForMac";
 
 const freeFeatures = [
   "3 AI generations",
@@ -22,10 +23,8 @@ export default function Pricing() {
     <section id="pricing" className="px-6 py-28">
       <div className="mx-auto max-w-6xl">
         <div className="mb-14 text-center">
-          <p className="mb-3 text-sm uppercase tracking-[0.3em] text-white/40">
-            Pricing
-          </p>
-          <h2 className="text-4xl font-semibold tracking-tight md:text-5xl">
+          <p className="type-eyebrow mb-4">Pricing</p>
+          <h2 className="type-heading text-balance text-4xl font-semibold tracking-[-0.03em] md:text-5xl md:tracking-[-0.035em]">
             Simple pricing. No subscription required.
           </h2>
         </div>
@@ -36,7 +35,6 @@ export default function Pricing() {
             price="$0"
             description="Try WallyAI and generate your first wallpapers."
             features={freeFeatures}
-            button="Start Free"
           />
 
           <PricingCard
@@ -44,7 +42,6 @@ export default function Pricing() {
             price="$19"
             description="Unlock the full wallpaper studio forever."
             features={proFeatures}
-            button="Join Waitlist"
             featured
           />
         </div>
@@ -58,14 +55,12 @@ function PricingCard({
   price,
   description,
   features,
-  button,
   featured = false,
 }: {
   title: string;
   price: string;
   description: string;
   features: string[];
-  button: string;
   featured?: boolean;
 }) {
   return (
@@ -76,33 +71,31 @@ function PricingCard({
           : "border-white/10 bg-white/[0.04] text-white"
       }`}
     >
-      <h3 className="text-2xl font-semibold">{title}</h3>
+      <h3 className="type-heading text-2xl font-semibold tracking-[-0.02em]">{title}</h3>
 
       <div className="mt-6 flex items-end gap-2">
-        <span className="text-5xl font-semibold">{price}</span>
+        <span className="type-heading text-5xl font-semibold tabular-nums tracking-[-0.03em]">
+          {price}
+        </span>
         {featured && <span className="mb-2 text-black/50">one-time</span>}
       </div>
 
-      <p className={`mt-5 leading-7 ${featured ? "text-black/60" : "text-white/55"}`}>
+      <p
+        className={`mt-5 leading-relaxed tracking-tight ${featured ? "text-black/60" : "text-white/[0.55]"}`}
+      >
         {description}
       </p>
 
-      <a
-        href="#"
-        className={`mt-8 inline-flex w-full justify-center rounded-full px-6 py-3 text-sm font-semibold transition ${
-          featured
-            ? "bg-black text-white hover:bg-black/85"
-            : "bg-white text-black hover:bg-white/90"
-        }`}
-      >
-        {button}
-      </a>
+      <DownloadForMac
+        variant={featured ? "dark" : "light"}
+        className="mt-8 w-full"
+      />
 
       <div className="mt-8 space-y-4">
         {features.map((feature) => (
           <div key={feature} className="flex items-center gap-3">
             <Check size={18} />
-            <span className={featured ? "text-black/70" : "text-white/65"}>
+            <span className={featured ? "text-black/70" : "text-white/[0.62]"}>
               {feature}
             </span>
           </div>

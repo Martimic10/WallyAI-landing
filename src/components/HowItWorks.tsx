@@ -21,10 +21,8 @@ export default function HowItWorks() {
     <section className="px-6 py-28">
       <div className="mx-auto max-w-7xl">
         <div className="mb-14 text-center">
-          <p className="mb-3 text-sm uppercase tracking-[0.3em] text-white/40">
-            How it works
-          </p>
-          <h2 className="text-4xl font-semibold tracking-tight md:text-5xl">
+          <p className="type-eyebrow mb-4">How it works</p>
+          <h2 className="type-heading text-balance text-4xl font-semibold tracking-[-0.03em] md:text-5xl md:tracking-[-0.035em]">
             From photo to wallpaper in seconds.
           </h2>
         </div>
@@ -35,9 +33,13 @@ export default function HowItWorks() {
               key={step.title}
               className="rounded-3xl border border-white/10 bg-white/[0.04] p-8"
             >
-              <div className="mb-10 text-sm text-white/35">{step.number}</div>
-              <h3 className="text-2xl font-semibold">{step.title}</h3>
-              <p className="mt-4 leading-7 text-white/55">
+              <div className="mb-10 text-xs font-semibold tabular-nums tracking-widest text-white/30">
+                {step.number}
+              </div>
+              <h3 className="type-heading text-2xl font-semibold tracking-[-0.02em]">
+                {step.title}
+              </h3>
+              <p className="mt-4 leading-relaxed text-white/[0.55]">
                 {step.description}
               </p>
             </div>

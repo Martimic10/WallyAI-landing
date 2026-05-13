@@ -12,15 +12,13 @@ export default function VerticalGallery() {
 
       <div className="relative mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.8fr_1.2fr]">
         <div className="self-center">
-          <p className="mb-3 text-sm uppercase tracking-[0.3em] text-white/40">
-            Gallery
-          </p>
+          <p className="type-eyebrow mb-4">Gallery</p>
 
-          <h2 className="text-4xl font-semibold tracking-tight md:text-5xl">
+          <h2 className="type-heading text-balance text-4xl font-semibold tracking-[-0.03em] md:text-5xl md:tracking-[-0.035em]">
             A premium wallpaper library built into the app.
           </h2>
 
-          <p className="mt-5 max-w-xl leading-8 text-white/55">
+          <p className="mt-5 max-w-xl leading-relaxed tracking-tight text-white/[0.55]">
             Choose from cinematic landscapes, anime skies, dark minimal setups,
             cyberpunk scenes, nature packs, abstract art, and more.
           </p>
@@ -29,7 +27,7 @@ export default function VerticalGallery() {
             {galleryCategories.map((category) => (
               <span
                 key={category}
-                className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-white/65"
+                className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-[13px] font-medium tracking-wide text-white/60"
               >
                 {category}
               </span>

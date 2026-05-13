@@ -45,10 +45,8 @@ export default function Features() {
     <section id="features" className="px-6 py-28">
       <div className="mx-auto max-w-7xl">
         <div className="mb-14 max-w-2xl">
-          <p className="mb-3 text-sm uppercase tracking-[0.3em] text-white/40">
-            Features
-          </p>
-          <h2 className="text-4xl font-semibold tracking-tight md:text-5xl">
+          <p className="type-eyebrow mb-4">Features</p>
+          <h2 className="type-heading text-balance text-4xl font-semibold tracking-[-0.03em] md:text-5xl md:tracking-[-0.035em]">
             Everything your desktop needs to look incredible.
           </h2>
         </div>
@@ -66,8 +64,10 @@ export default function Features() {
                   <Icon size={22} />
                 </div>
 
-                <h3 className="text-xl font-semibold">{feature.title}</h3>
-                <p className="mt-3 leading-7 text-white/55">
+                <h3 className="type-heading text-lg font-semibold tracking-[-0.02em] md:text-xl">
+                  {feature.title}
+                </h3>
+                <p className="mt-3 leading-relaxed text-white/[0.55]">
                   {feature.description}
                 </p>
               </div>

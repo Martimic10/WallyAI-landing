@@ -1,5 +1,18 @@
 @import "tailwindcss";
 
+@utility type-heading {
+  font-family: var(--font-jakarta), var(--font-inter), ui-sans-serif, system-ui,
+    sans-serif;
+}
+
+@utility type-eyebrow {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgb(255 255 255 / 0.42);
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -7,6 +20,9 @@ html {
 body {
   background: #050507;
   color: white;
+  font-synthesis-weight: none;
+  text-rendering: optimizeLegibility;
+  letter-spacing: -0.011em;
 }
 
 ::selection {
@@ -32,7 +48,7 @@ body {
 }
 
 .animate-scroll-x {
-  animation: scroll-x 36s linear infinite;
+  animation: scroll-x 120s linear infinite;
 }
 
 .animate-scroll-y {

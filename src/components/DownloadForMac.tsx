@@ -34,7 +34,7 @@ export default function DownloadForMac({
   const base =
     variant === "navbar"
       ? "group cursor-pointer inline-flex items-center justify-center rounded-full transition"
-      : "group cursor-pointer inline-flex items-center justify-center rounded-full px-7 py-3 text-sm font-semibold transition";
+      : "group cursor-pointer inline-flex min-h-12 w-full items-center justify-center rounded-full px-5 py-3.5 text-sm font-semibold transition sm:min-h-0 sm:w-auto sm:px-7 sm:py-3";
 
   const merged = cn(base, variantClass[variant], className);
 

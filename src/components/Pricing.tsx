@@ -20,16 +20,16 @@ const proFeatures = [
 
 export default function Pricing() {
   return (
-    <section id="pricing" className="px-6 py-28">
+    <section id="pricing" className="px-4 py-16 sm:px-6 sm:py-20 md:py-28">
       <div className="mx-auto max-w-6xl">
-        <div className="mb-14 text-center">
-          <p className="type-eyebrow mb-4">Pricing</p>
-          <h2 className="type-heading text-balance text-4xl font-semibold tracking-[-0.03em] md:text-5xl md:tracking-[-0.035em]">
+        <div className="mb-10 text-center sm:mb-14">
+          <p className="type-eyebrow mb-3 sm:mb-4">Pricing</p>
+          <h2 className="type-heading text-balance text-3xl font-semibold tracking-[-0.03em] sm:text-4xl md:text-5xl md:tracking-[-0.035em]">
             Simple pricing. No subscription required.
           </h2>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-2">
+        <div className="grid gap-5 md:grid-cols-2 md:gap-6">
           <PricingCard
             title="Free"
             price="$0"
@@ -65,16 +65,16 @@ function PricingCard({
 }) {
   return (
     <div
-      className={`rounded-3xl border p-8 ${
+      className={`rounded-2xl border p-6 sm:rounded-3xl sm:p-8 ${
         featured
           ? "border-white/25 bg-white text-black"
           : "border-white/10 bg-white/[0.04] text-white"
       }`}
     >
-      <h3 className="type-heading text-2xl font-semibold tracking-[-0.02em]">{title}</h3>
+      <h3 className="type-heading text-xl font-semibold tracking-[-0.02em] sm:text-2xl">{title}</h3>
 
       <div className="mt-6 flex items-end gap-2">
-        <span className="type-heading text-5xl font-semibold tabular-nums tracking-[-0.03em]">
+        <span className="type-heading text-4xl font-semibold tabular-nums tracking-[-0.03em] sm:text-5xl">
           {price}
         </span>
         {featured && <span className="mb-2 text-black/50">one-time</span>}

@@ -42,23 +42,23 @@ const features = [
 
 export default function Features() {
   return (
-    <section id="features" className="px-6 py-28">
+    <section id="features" className="px-4 py-16 sm:px-6 sm:py-20 md:py-28">
       <div className="mx-auto max-w-7xl">
-        <div className="mb-14 max-w-2xl">
-          <p className="type-eyebrow mb-4">Features</p>
-          <h2 className="type-heading text-balance text-4xl font-semibold tracking-[-0.03em] md:text-5xl md:tracking-[-0.035em]">
+        <div className="mb-10 max-w-2xl sm:mb-14">
+          <p className="type-eyebrow mb-3 sm:mb-4">Features</p>
+          <h2 className="type-heading text-balance text-3xl font-semibold tracking-[-0.03em] sm:text-4xl md:text-5xl md:tracking-[-0.035em]">
             Everything your desktop needs to look incredible.
           </h2>
         </div>
 
-        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-4 sm:gap-5 md:grid-cols-2 lg:grid-cols-3">
           {features.map((feature) => {
             const Icon = feature.icon;
 
             return (
               <div
                 key={feature.title}
-                className="rounded-3xl border border-white/10 bg-white/[0.04] p-7 transition hover:bg-white/[0.07]"
+                className="rounded-2xl border border-white/10 bg-white/[0.04] p-5 transition hover:bg-white/[0.07] sm:rounded-3xl sm:p-7"
               >
                 <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-2xl bg-white text-black">
                   <Icon size={22} />

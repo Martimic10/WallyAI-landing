@@ -18,25 +18,25 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section className="px-6 py-28">
+    <section className="px-4 py-16 sm:px-6 sm:py-20 md:py-28">
       <div className="mx-auto max-w-7xl">
-        <div className="mb-14 text-center">
-          <p className="type-eyebrow mb-4">How it works</p>
-          <h2 className="type-heading text-balance text-4xl font-semibold tracking-[-0.03em] md:text-5xl md:tracking-[-0.035em]">
+        <div className="mb-10 text-center sm:mb-14">
+          <p className="type-eyebrow mb-3 sm:mb-4">How it works</p>
+          <h2 className="type-heading text-balance text-3xl font-semibold tracking-[-0.03em] sm:text-4xl md:text-5xl md:tracking-[-0.035em]">
             From photo to wallpaper in seconds.
           </h2>
         </div>
 
-        <div className="grid gap-5 md:grid-cols-3">
+        <div className="grid gap-4 sm:gap-5 md:grid-cols-3">
           {steps.map((step) => (
             <div
               key={step.title}
-              className="rounded-3xl border border-white/10 bg-white/[0.04] p-8"
+              className="rounded-2xl border border-white/10 bg-white/[0.04] p-6 sm:rounded-3xl sm:p-8"
             >
               <div className="mb-10 text-xs font-semibold tabular-nums tracking-widest text-white/30">
                 {step.number}
               </div>
-              <h3 className="type-heading text-2xl font-semibold tracking-[-0.02em]">
+              <h3 className="type-heading text-xl font-semibold tracking-[-0.02em] sm:text-2xl">
                 {step.title}
               </h3>
               <p className="mt-4 leading-relaxed text-white/[0.55]">

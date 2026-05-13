@@ -5,6 +5,11 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "WallyAI",
   description: "AI wallpapers for beautiful Mac desktops.",
+  icons: {
+    icon: "/wallyai-logo-removebg-preview.png",
+    shortcut: "/wallyai-logo-removebg-preview.png",
+    apple: "/wallyai-logo-removebg-preview.png",
+  },
 };
 
 export default function RootLayout({

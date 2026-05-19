@@ -17,28 +17,30 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-2 sm:gap-3">
-          {leftLinks.map((link) => (
-            <a
-              key={link}
-              href={`#${link.toLowerCase().replaceAll(" ", "-")}`}
-              className="text-base font-medium text-white/50 transition hover:text-white sm:text-lg"
-            >
-              {link}
-            </a>
-          ))}
-        </div>
+        <div className="grid grid-cols-2 gap-x-6 gap-y-0 sm:gap-x-10 md:col-span-2 md:grid-cols-2 lg:col-span-2">
+          <div className="flex flex-col gap-2 sm:gap-3">
+            {leftLinks.map((link) => (
+              <a
+                key={link}
+                href={`#${link.toLowerCase().replaceAll(" ", "-")}`}
+                className="text-base font-medium text-white/50 transition hover:text-white sm:text-lg"
+              >
+                {link}
+              </a>
+            ))}
+          </div>
 
-        <div className="flex flex-col gap-2 sm:gap-3">
-          {rightLinks.map((link) => (
-            <a
-              key={link}
-              href="#"
-              className="text-base font-medium text-white/50 transition hover:text-white sm:text-lg"
-            >
-              {link}
-            </a>
-          ))}
+          <div className="flex flex-col gap-2 sm:gap-3">
+            {rightLinks.map((link) => (
+              <a
+                key={link}
+                href="#"
+                className="text-base font-medium text-white/50 transition hover:text-white sm:text-lg"
+              >
+                {link}
+              </a>
+            ))}
+          </div>
         </div>
       </div>
 

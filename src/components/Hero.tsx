@@ -1,12 +1,12 @@
 import DownloadForMac from "./DownloadForMac";
 import SlideHoverLabel from "./SlideHoverLabel";
-import WallpaperCarousel from "./WallpaperCarousel";
+import MacbookScrollDemo from "./macbook-scroll-demo";
 
 export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen overflow-hidden px-4 pb-20 pt-24 sm:px-6 sm:pb-24 sm:pt-28 md:pt-36"
+      className="relative min-h-screen px-4 pb-20 pt-24 sm:px-6 sm:pb-24 sm:pt-28 md:min-h-0 md:pt-36"
     >
       <div className="absolute left-1/2 top-0 h-[min(420px,90vw)] w-[min(800px,140vw)] max-w-[800px] -translate-x-1/2 rounded-full bg-orange-500/20 blur-[100px] sm:blur-[140px]" />
       <div className="absolute right-0 top-28 h-[min(320px,70vw)] w-[min(400px,85vw)] max-w-[400px] rounded-full bg-blue-500/20 blur-[80px] sm:top-40 sm:blur-[120px]" />
@@ -37,9 +37,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="mt-20 sm:mt-28 md:mt-40">
-        <WallpaperCarousel />
-      </div>
+      <MacbookScrollDemo />
     </section>
   );
 }
